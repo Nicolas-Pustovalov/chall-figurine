@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Shop Ofig</title>
+</head>
+<body>
+        <div class="container">
+        <header class="header">
+            <h1 class="header__title">
+                oFig <em class="header__title-legend">Figurines et statuettes</em>
+            </h1>
+            <h2 class="header__subtitle">
+                Figurines sur le thème de <strong class="header__subtitle-strong">Final Fantasy</strong>
+            </h2>
+        </header>
+        <main class="main">
+            <form id="cart-form">
+                <!-- Panier -->
+                <h3 class="cart-form-title cart-section-title">Votre panier</h3>
+                <section class="cart-form">
+                    <table class="cart-table">
+                        <!-- Ligne d'entêtes -->
+                        <thead class="cart-header">
+                            <th>Figurine</th>
+                            <th>Prix unitaire</th>
+                            <th>Quantité</th>
+                        </thead>
+
+                        <!-- Corps du tableau -->
+                        <tbody>
+                            <tr>
+                                <td> Cloud Strife </td>
+                                <td>59€</td>
+                                <td>
+                                    <input 
+                                        type="number"
+                                        class="cart-quantity-input"
+                                        value="1"
+                                    >
+                                    <a class="cart-item-remove" href="#">
+                                        supprimer
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Cloud Strife </td>
+                                <td>59€</td>
+                                <td>
+                                    <input 
+                                        type="number"
+                                        class="cart-quantity-input"
+                                        value="1"
+                                    >
+                                    <a class="cart-item-remove" href="#">
+                                        supprimer
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Cloud Strife </td>
+                                <td>59€</td>
+                                <td>
+                                    <input 
+                                        type="number"
+                                        class="cart-quantity-input"
+                                        value="1"
+                                    >
+                                    <a class="cart-item-remove" href="#">
+                                        supprimer
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <!-- Le footer du tableau -->
+                        <tfoot>
+                            <tr>
+                                <td class="cart-total-title" colspan="2"> Total de la commande</td>
+                                <td class="cart-total-price">197€</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </section>
+                
+            <!-- Options de livraison -->
+            <h3 class="cart-section-title">Préférences de livraison</h3>
+                <section class="delivery">
+                    <div class="cart-section-details">
+                        <h4 class="cart-section-details__title">
+                            Où souhaitez vous être livré ?
+                        </h4>
+                        <label for="shipping-home">
+                            <input name="shipping" type="radio" id="shipping-home"/> Mon adresse courante
+                        </label>
+                        <label for="shipping-other">
+                            <input name="shipping" type="radio" id="shipping-other"/> Autre adresse
+                        </label>
+                        <h4 class="cart-section-details__title">
+                            Options
+                        </h4>
+                        <label for="sms">
+                            <input
+                              type="checkbox"
+                              name="sms"
+                              id="sms"
+                              checked
+                            />
+                            Suivi de livraison par sms (inclus)
+                        </label>              
+                        <label for="money-back">
+                            <input
+                            type="checkbox"
+                            name="money-back"
+                            id="money-back"                  
+                            />
+                            Satisfait ou remboursé (+ 2 euros)
+                        </label>                    
+                        <label for="care">
+                        <input
+                            type="checkbox"
+                            name="care"
+                            id="care"                        
+                        />
+                        Garantie 2 ans (+ 10 euros)
+                        </label>
+                    </div>
+                    <div class="cart-section-details">
+                        <h4 class="cart-section-details__title">Adresse</h4>
+                        <div class="cart-section-field">
+                          <label for="ff-street">
+                            Rue
+                          </label>
+                          <input type="text" id="ff-street" />
+                        </div>
+                        <div class="cart-section-field">
+                          <label for="ff-zipcode">
+                            Code postal
+                          </label>
+                          <input type="text" id="ff-zipcode" />
+                        </div>
+                        <div class="cart-section-field">
+                          <label for="ff-city">
+                            Ville
+                          </label>
+                          <input type="text" id="ff-city" />
+                        </div>
+                        <h4 class="cart-section-details__title">
+                          Informations complémentaires
+                        </h4>
+                        <div class="cart-section-field">
+                          <label for="infos">
+                            interphone, bâtiment, etc.
+                          </label>
+                          <textarea name="" id="infos"></textarea>
+                        </div>
+                      </div>
+                </section>
+
+            <!-- Total -->
+                <section class="total">
+                    <div class="total-container">
+                        <p class="total-container__text">
+                            Montant à régler :
+                        </p>
+                        <strong class="total-container__price">
+                            197€
+                        </strong>
+                    </div>
+                </section>
+            <!-- Butons -->
+            <section class="confirmation">
+                <div class="confirmation-container">
+                    <button class="button button--cancel">
+                        Continuez vos achats
+                    </button>
+                    <button class="button button--validate">
+                        Valider et payer
+                    </button>
+                </div>
+            </section>
+            </form>
+        </main>
+        <div class="soldes">
+            <p>Soldes</p>
+        </div>
+        <footer class="footer">
+            oFig - toutes les images sont sous copyright SquareEnix
+        </footer>
+        
+    </div>
+    
+</body>
+</html>
